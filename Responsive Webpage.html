@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        background-color: rgb(227, 226, 226);
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .header {
+        height: 190px;
+        text-align: center;
+        padding: 15px;
+      }
+      .unknown {
+        background-color: black;
+        color: #ffffff;
+        padding: 5px;
+      }
+      /* main */
+      .main {
+        /* height: 200%; */
+        display: flex;
+        justify-content: center;
+        /* border: 1px solid black; */
+      }
+      .section {
+        width: 65%;
+      }
+      .sec1 {
+        height: 550px;
+        /* border: 1px solid red; */
+        background-color: aliceblue;
+        box-shadow: 3px 3px 10px grey;
+      }
+      .sec2 {
+        height: 550px;
+        /* border: 1px solid red; */
+        margin-top: 50px;
+        background-color: aliceblue;
+        box-shadow: 3px 3px 10px grey;
+      }
+      .section button {
+        border: 1px solid black;
+        padding: 10px;
+        margin: 10px;
+        margin-top: 50px;
+      }
+      .section button:hover {
+        background-color: rgb(205, 204, 204);
+      }
+
+      .main button {
+        padding: 15px;
+      }
+      .end {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 35px;
+        font-size: 18px;
+        font-weight: 12px;
+      }
+      .end button {
+        margin-top: 10px;
+        font-size: 18px;
+      }
+      .end span {
+        background-color: black;
+        color: white;
+        border-radius: 100px;
+        padding: 10px;
+      }
+
+      /* aside */
+      .aside {
+        width: 30%;
+        margin-left: 4%;
+      }
+      .asi1 {
+        height: 420px;
+        /* border: 1px solid blue; */
+        background-color: aliceblue;
+        box-shadow: 3px 3px 10px grey, -3px -3px 10px grey;
+      }
+      .asi2 {
+        height: 400px;
+        border: 1px solid blue;
+        margin-top: 50px;
+        box-shadow: 3px 3px 10px grey;
+        background-color: aliceblue;
+      }
+      .asi2 h3 {
+        background-color: rgb(205, 204, 204);
+        height: 63px;
+        padding: 20px;
+        width: 100%;
+        margin: 0;
+      }
+      .asi2 ul {
+        list-style-type: none;
+        margin-left: 0px;
+      }
+      .asi2 img {
+        margin-left: -20px;
+      }
+      .asi2 li {
+        display: flex;
+        height: 60px;
+        margin-top: 20px;
+        /* border: 1px solid red; */
+        border-bottom: 1px solid grey;
+      }
+      .asi2 span {
+        margin: 10px;
+        margin-left: 15px;
+      }
+      .asi2 ul li:hover {
+        background-color: rgb(195, 192, 192);
+      }
+      .asi3 {
+        height: 250px;
+        margin-top: 50px;
+        /* border: 1px solid blue; */
+        background-color: aliceblue;
+        box-shadow: 3px 3px 10px grey;
+      }
+      .asi3 h3 {
+        height: 60px;
+        width: 100%;
+        background-color: rgb(205, 204, 204);
+        padding: 10px;
+        margin-left: 0px;
+      }
+      .asi3 .span {
+        padding: 5px;
+        margin-left: 15px;
+      }
+      .asi3 span {
+        background-color: rgb(214, 214, 214);
+        color: black;
+      }
+      .asi3 .s1 {
+        background-color: black;
+        color: white;
+      }
+      .footer {
+        height: 200px;
+        margin-top: 50px;
+        border: 1px solid green;
+        background-color: grey;
+      }
+      .footer button {
+        padding: 15px;
+        margin: 15px;
+      }
+      .footer p {
+        margin: 10px;
+      }
+      .n {
+        background-color: black;
+        color: white;
+      }
+      p,
+      h2,
+      h3 {
+        margin: 15px;
+      }
+      .pre:hover {
+        cursor: not-allowed;
+      }
+      .n:hover {
+        cursor: grab;
+      }
+
+      /* Media Query */
+
+      /* @media only screen and(max-width:600px){
+              .section{
+                flex-wrap: wrap;
+              }
+            
+              .aside{
+                flex-wrap: wrap;
+              }
+            } */
+
+      @media only screen and (max-width: 768px) {
+        .main {
+          display: flex;
+          justify-content: space-evenly;
+          flex-wrap: wrap;
+          font-size: 15px;
+        }
+        .section img {
+          width: 100%;
+          height: auto;
+        }
+        .section {
+          width: 100%;
+        }
+        /* .aside {
+                display: flex;
+                justify-content: space-evenly;
+                flex-wrap: wrap;
+                font-size: 15px;
+              } */
+        .aside {
+          width: 100%;
+          flex-wrap: wrap;
+          margin-top: 10px;
+          font-size: 15px;
+        }
+        .asi1,
+        .asi2 {
+          width: 100%;
+          height: auto;
+        }
+        .asi3 h3 {
+          margin-top: 0px;
+        }
+        .asi1,
+        .asi2,
+        .asi3 {
+          width: 100%;
+        }
+      }
+      @media only screen and (min-width: 768px) {
+        .sec1,
+        .sec2 {
+          height: 600px;
+        }
+
+        .aside {
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+        }
+        .asi1,
+        .asi2,
+        .asi3 {
+          width: 100%;
+        }
+        .asi1 {
+          height: 500px;
+        }
+        .asi2 {
+          height: 400px;
+        }
+        .asi3 {
+          height: 280px;
+        }
+        .asi3 h3 {
+          margin-top: 0px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- header section -->
+    <div class="header">
+      <h1>MY BLOG</h1>
+      <p>Welcome to the blog of <span class="unknown"> unknown</span></p>
+    </div>
+    <!-- Main Section -->
+    <div class="main">
+      <div class="section">
+        <!-- 1 -->
+        <div class="sec1">
+          <img src="woods.jpg" width="100%" height="290px" />
+          <h2>TITLE HEADING</h2>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam
+            quam facilis dicta laboriosam voluptas quos distinctio pariatur,
+            error repellat quasi quis incidunt atque non harum nam beatae animi
+            repudiandae provident, dolores aliquam est dolore esse similique!
+            Hic, placeat. Obcaecati, officia voluptatum. Fuga delectus
+            consequatur accusantium doloremque id ea eum placeat eius iusto
+            laboriosam, eveniet blanditiis, rem, voluptates iure odit vel!
+          </p>
+          <div class="end">
+            <button class="read">Read More</button>
+            <div>
+              <p>Comment <span>2</span></p>
+            </div>
+          </div>
+        </div>
+        <!-- 2 -->
+        <div class="sec2">
+          <img src="./bridge.jpg" width="100%" height="290px" alt="" />
+          <h2>BLOG ENTRY</h2>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem
+            sapiente adipisci provident deleniti, id eaque dolor. Quis
+            doloremque neque reiciendis eligendi consectetur a recusandae quia
+            consequuntur, architecto suscipit similique. Delectus itaque
+            repudiandae architecto aperiam iure labore amet vero, aspernatur
+            laborum ex hic? Quas impedit rerum esse quo soluta quos quae
+            adipisci officiis, suscipit atque beatae quod autem modi nostrum
+            exercitationem!
+          </p>
+          <div class="end">
+            <button class="read">Read More</button>
+            <div>
+              <p>Comment <span>2</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- _____Aside Section_____ -->
+      <!-- 1 -->
+      <div class="aside">
+        <div class="asi1">
+          <img src="./avatar_g.jpg" alt="" height="250px" width="100%" />
+          <h3>My Name</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde,
+            ratione dolor. Fugit itaque reiciendis quod molestias unde aut
+            quibusdam, fugiat magnam! Non quisquam nesciunt cumque, odit
+            temporibus quibusdam quo eaque?
+          </p>
+        </div>
+        <!-- 2 -->
+        <div class="asi2">
+          <h3>Popular Posts</h3>
+          <ul>
+            <li>
+              <img src="./workshop.jpg" alt="" height="60px" width="60px" />
+              <span>Lorem <br />Sed mattis unc </span>
+            </li>
+
+            <li>
+              <img src="./workshop.jpg" alt="" height="60px" width="60px" />
+              <span>Lorem <br />Sed mattis unc </span>
+            </li>
+
+            <li>
+              <img src="./workshop.jpg" alt="" height="60px" width="60px" />
+              <span>Lorem <br />Sed mattis unc </span>
+            </li>
+
+            <li>
+              <img src="./workshop.jpg" alt="" height="60px" width="60px" />
+              <span>Lorem <br />Sed mattis unc </span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- 3 -->
+        <div class="asi3">
+          <h3>Tags</h3>
+          <div class="span">
+            <span class="s1">Travel</span> <span>New York</span>
+            <span>London</span> <span>IKEA</span> <span>NORWAY</span>
+            <span>DIY</span> <br />
+            <br />
+            <br />
+            <span>ideas</span> <span>Baby</span> <span>Family</span>
+            <span>News</span> <span>Clothing</span> <br />
+            <br />
+            <br />
+            <span>Shopping</span> <span>Sport</span> <span>Games</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer section -->
+    <div class="footer">
+      <button class="pre">Previous</button>
+      <button class="n">Next>></button>
+      <p>Powered by w3.css</p>
+    </div>
+  </body>
+</html>
